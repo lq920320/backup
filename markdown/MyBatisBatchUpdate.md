@@ -25,6 +25,11 @@
 	<forearch collection="rooms" item="room">
 		WHEN #{room.id} THEN #{room.breakfastNum}
 	</foreach>
+	END,
+	SET breakfastTime = CASE id
+	<foreach collection="rooms" item="room">
+		WHEN #{room.id} THEN #{room.breakfastTime}
+	</foreach>
 	END
 	WHERE id IN 
 	<foreach collection="rooms" item="room" separator="," open="(" close=")">
