@@ -46,20 +46,19 @@ PaaS is the next layer up from IaaS in the cloud computing  service model, and e
 
 
 
-## Why do developers use PaaS?
-### 开发人员为什么使用 PaaS？
-
 ##### 更快地投入市场
 
-PaaS is used to build applications more quickly than would be  possible if developers had to worry about building, configuring, and  provisioning their own platforms and backend infrastructure. With PaaS,  all they need to do is write the code and test the application, and the  vendor handles the rest.
+PaaS 用于构建应用程序的速度，可能比开发人员必须考虑构建、配置和供应自己的平台以及后端基础设施来构建应用的速度要更快。有了 PaaS，开发人员他们只需要编写代码和测试应用程序，而供应商会解决剩下的问题。
 
 ##### 由始自终一个环境
 
-PaaS permits developers to build, test, debug, deploy, host,  and update their applications all in the same environment. This enables  developers to be sure a web application will function properly as hosted  before they release, and it simplifies the application development  lifecycle.
+PaaS 允许开发人员在同等环境中构建、测试、调试、部署、托管和更新他们的应用程序。这使开发人员能够确保 web 应用在发布前能够正常运行，以及会简化应用程序开发周期。
 
 ##### 价格
 
 PaaS is more cost-effective than leveraging IaaS in many  cases. Overhead is reduced because PaaS customers don't need to manage  and provision virtual machines. In addition, some providers have a  pay-as-you-go pricing structure, in which the vendor only charges for  the computing resources used by the application, usually saving  customers money. However, each vendor has a slightly different pricing  structure, and some platform providers charge a flat fee per month.
+
+在许多情况下，使用 PaaS 比 IaaS 更具成本效益。成本的降低源于 PaaS 的用户无需去管理和提供虚拟机。此外，
 
 ##### 许可证的便利性
 
