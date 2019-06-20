@@ -14,5 +14,5 @@
 
 ## 资源推荐
 
+1. [生成好看的代码截图网站——Carbon](https://carbon.now.sh/)
 1. [markdown编辑器推荐--Typora，所见即所写](https://www.typora.io/#)
-1. [leetcode刷题--左耳朵耗子](https://github.com/haoel/leetcode)
