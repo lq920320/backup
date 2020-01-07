@@ -21,6 +21,9 @@ public class ComparatorTest {
   public void compareTest() {
     List<TestData> dataList = getDataList();
     dataList = dataList.stream().sorted(Comparator.comparing(TestData::getId, Comparator.nullsLast(Comparator.naturalOrder()))).collect(Collectors.toList());
+    List<Integer> idList = dataList.stream().map(TestData::getId).sorted(Comparator.nullsLast(Comparator.reverseOrder())).collect(Collectors.toList());
+    Integer maxId = idList.get(0);
+    System.out.println("maxId :  " + maxId);
     for (TestData data : dataList) {
       System.out.println(data.toString());
     }
