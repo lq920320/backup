@@ -33,6 +33,19 @@ SELECT * FROM INFORMATION_SCHEMA.INNODB_LOCK_WAITS;
 
 ```
 
+## 关联表删除，`DELETE FROM` 与 `JOIN` 的结合使用
+
+```sql
+# 第一种方式：
+DELETE T1
+FROM T1
+INNER JOIN T2 ON T1.key = T2.key
+WHERE condition;
+
+# 第二种方式：
+DELETE FROM task_news a where exists(select 1 from temp_new b where a.ID=b.ID and b.UserID>0);
+```
+
 ## 资源推荐
 
 1. [生成好看的代码截图网站——Carbon](https://carbon.now.sh/)
