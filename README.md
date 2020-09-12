@@ -46,6 +46,13 @@ WHERE condition;
 DELETE FROM task_news a where exists(select 1 from temp_new b where a.ID=b.ID and b.UserID>0);
 ```
 
+## VS Code IDE
+#### 1. 窗口打开多个文件设置
+
+**方法1**：路径C:\Users\admin\AppData\Roaming\Code\User下的settings.json添加一条配置："workbench.editor.enablePreview": false。
+
+**方法2**：文件 -> 首选项 -> 设置，搜索“preview”，把“Workbench > Ediotor: Enable PreView”的勾选去掉。注意“用户”和“工作区”确保都去掉了勾选。
+
 ## 资源推荐
 
 1. [生成好看的代码截图网站——Carbon](https://carbon.now.sh/)
