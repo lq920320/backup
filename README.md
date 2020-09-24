@@ -53,6 +53,26 @@ DELETE FROM task_news a where exists(select 1 from temp_new b where a.ID=b.ID an
 
 **方法2**：文件 -> 首选项 -> 设置，搜索“preview”，把“Workbench > Ediotor: Enable PreView”的勾选去掉。注意“用户”和“工作区”确保都去掉了勾选。
 
+## Maven build 的问题
+如何隐藏 `mvn install` 过程中的 progress 展示？
+```
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-parent/27/maven-parent-27.pom
+Progress (1): 4.1/41 kB
+Progress (1): 8.2/41 kB
+Progress (1): 12/41 kB 
+Progress (1): 16/41 kB
+Progress (1): 20/41 kB
+Progress (1): 25/41 kB
+Progress (1): 29/41 kB
+Progress (1): 33/41 kB
+Progress (1): 37/41 kB
+Progress (1): 41 kB   
+```
+`mvn -B ..` 或者 `mvn --batch-mode ...`即可。
+
+[stackoverflow地址](https://stackoverflow.com/questions/21638697/disable-maven-download-progress-indication)
+
+
 ## 资源推荐
 
 1. [生成好看的代码截图网站——Carbon](https://carbon.now.sh/)
