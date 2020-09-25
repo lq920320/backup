@@ -72,6 +72,17 @@ Progress (1): 41 kB
 
 [stackoverflow地址](https://stackoverflow.com/questions/21638697/disable-maven-download-progress-indication)
 
+## vue 项目中展示 markdown 文件内容
+
+使用插件 [`vue-markdown-loader`](https://github.com/QingWei-Li/vue-markdown-loader)。
+
+但是有个问题，对于 markdown 中 table 的样式支持得不是很好，于是强制设置 scss 样式，`/deep/` 这种方式会报错，最新的方式应该是 `::v-deep` 。
+
+> 在vue项目中使用/deep/  来强制修改样式
+>    现在
+> 使用::v-deep 来修改样式
+> 原因，现在scss中会报loader错误
+
 
 ## 资源推荐
 
