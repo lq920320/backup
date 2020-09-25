@@ -78,9 +78,9 @@ Progress (1): 41 kB
 
 但是有个问题，对于 markdown 中 table 的样式支持得不是很好，于是强制设置 scss 样式，`/deep/` 这种方式会报错，最新的方式应该是 `::v-deep` 。
 
-> 在vue项目中使用/deep/  来强制修改样式
->    现在
-> 使用::v-deep 来修改样式
+> 在vue项目中使用/deep/  来强制修改样式     
+>    现在      
+> 使用::v-deep 来修改样式     
 > 原因，现在scss中会报loader错误
 
 
