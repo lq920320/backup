@@ -89,6 +89,7 @@ Progress (1): 41 kB
 1. [生成好看的代码截图网站——Carbon](https://carbon.now.sh/)
 1. [markdown编辑器推荐--Typora，所见即所写](https://www.typora.io/#)
 1. [数据科学入门repo](https://github.com/virgili0/Virgilio/blob/master/zh-CN/README.md)
+1. [Go语言中文网](https://studygolang.com/dl)
 
 ## 工具汇总
 #### 插件篇
