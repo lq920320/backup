@@ -96,7 +96,7 @@ Progress (1): 41 kB
 ## 工具汇总
 #### 插件篇
 
-**InteliJ IDRA**
+**IntelliJ IDEA**
 
 - Free Mybatis plugin ：帮助你在 Mapper.java 与 mapper.xml 中方便跳转
 - Lombok : 减少代码量
