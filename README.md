@@ -92,6 +92,7 @@ Progress (1): 41 kB
 1. [Go语言中文网](https://studygolang.com/dl)
 1. [极客导航](https://geekdocs.cn/)
 1. [现代JS教程](https://javascript.info/)
+1. [现代JS教程中文版](https://zh.javascript.info/)
 
 ## 工具汇总
 #### 插件篇
