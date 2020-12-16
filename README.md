@@ -91,9 +91,12 @@ Progress (1): 41 kB
 1. [数据科学入门repo](https://github.com/virgili0/Virgilio/blob/master/zh-CN/README.md)
 1. [Go语言中文网](https://studygolang.com/dl)
 1. [极客导航](https://geekdocs.cn/)
+1. [现代JS教程](https://javascript.info/)
 
 ## 工具汇总
 #### 插件篇
+
+**InteliJ IDRA**
 
 - Free Mybatis plugin ：帮助你在 Mapper.java 与 mapper.xml 中方便跳转
 - Lombok : 减少代码量
@@ -101,6 +104,8 @@ Progress (1): 41 kB
 - codota : 人工智能帮你写代码【Install on IntelliJ and Android Studio to get advanced Java code completions】
 - Alibaba Java Coding Guidelines : 代码规范扫描插件
 - SequenceDiagram : 展示调用时序图，参考链接，https://juejin.im/post/6887719053931053064
+
+**VS code**
 
 #### 网站在线工具篇
 
@@ -130,6 +135,7 @@ Progress (1): 41 kB
 - Git 飞行规则：https://github.com/k88hudson/git-flight-rules/blob/master/README_zh-CN.md
 - 黑客法则定律大全：https://github.com/nusr/hacker-laws-zh
 - 开发人员学习资料：https://github.com/developer-learning
+- 现代 JS 教程地址：https://github.com/javascript-tutorial/en.javascript.info/tree/master
 
 
 
