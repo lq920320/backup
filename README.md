@@ -105,6 +105,8 @@ Progress (1): 41 kB
 - codota : 人工智能帮你写代码【Install on IntelliJ and Android Studio to get advanced Java code completions】
 - Alibaba Java Coding Guidelines : 代码规范扫描插件
 - SequenceDiagram : 展示调用时序图，参考链接，https://juejin.im/post/6887719053931053064
+- CamelCase : 转换你的驼峰以及蛇型命名
+- Statistic : 有了这个插件之后你可以非常直观地看到你的项目中所有类型的文件的信息比如数量、大小等等，可以帮助你更好地了解你们的项目。
 
 **VS code**
 
