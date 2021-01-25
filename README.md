@@ -119,6 +119,7 @@ windows下 报错误 禁止运行脚本 ， 禁止脚本执行
 - SequenceDiagram : 展示调用时序图，参考链接，https://juejin.im/post/6887719053931053064
 - CamelCase : 转换你的驼峰以及蛇型命名
 - Statistic : 有了这个插件之后你可以非常直观地看到你的项目中所有类型的文件的信息比如数量、大小等等，可以帮助你更好地了解你们的项目。
+- treer : 生成项目的目录树，可以通过 `npm install -g treer` 安装，不过得允许系统运行脚本。
 
 **VS code**
 
