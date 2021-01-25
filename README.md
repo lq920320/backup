@@ -83,6 +83,18 @@ Progress (1): 41 kB
 > 使用::v-deep 来修改样式     
 > 原因，现在scss中会报loader错误
 
+## Windows 禁止执行脚本的解决
+
+windows下 报错误 禁止运行脚本 ， 禁止脚本执行
+
+原因：首次在计算机上启动 Windows PowerShell 时，现用执行策略很可能是 Restricted（默认设置）。
+
+1 在 Windows PowerShell 中输入 `get-executionpolicy`  看输出执行策略是不是 `Restricted`；
+
+2 输入 `set-executionpolicy remotesigned`  修改执行策略即可。
+
+*注意：安全方面会收到一定的影响。*
+
 
 ## 资源推荐
 
