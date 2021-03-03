@@ -53,6 +53,27 @@ DELETE FROM task_news a where exists(select 1 from temp_new b where a.ID=b.ID an
 
 **方法2**：文件 -> 首选项 -> 设置，搜索“preview”，把“Workbench > Ediotor: Enable PreView”的勾选去掉。注意“用户”和“工作区”确保都去掉了勾选。
 
+## Intej IDEA IDE
+
+#### 1. 多个文件多行展示
+
+`settings -> Editor -> General -> Editor Tabs`，取消勾选 "show tabs in one row"。
+
+#### 2. 文本自动折行显示，不是自动换行
+
+**单个文件：** 这个操作只会对单个文件生效，不会全局生效
+
+> IntelliJ IDEA -> View -> Active Editor -> Use Soft Wraps
+
+**全局设置：**
+
+选中 `Settings -> Editor -> General`，有一栏为 `Soft Wraps`，勾选 “soft wraps these files” 选项，可以根据自己的需求完善文件类型，如下为我的设置：
+
+`*.md; *.txt; *.rst; *.adoc; *.java  `
+
+
+
+
 ## Maven build 的问题
 如何隐藏 `mvn install` 过程中的 progress 展示？
 ```
