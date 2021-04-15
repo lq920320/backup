@@ -124,6 +124,61 @@ windows下 报错误 禁止运行脚本 ， 禁止脚本执行
 
 不得不说，**重启大法好！！！**
 
+## Gradle
+
+#### 1、lombok 引用失败，导致一致编译不通过，找不到符号 `.getXxx()`
+
+**弃用的方式**
+
+```
+compile('org.projectlombok:lombok:1.18.2)
+```
+
+如果仍使用该方式, 在构建项目的时候会出现如下信息
+
+```
+The following annotation processors were detected on the compile classpath: 'lombok.launch.AnnotationProcessorHider$AnnotationProcessor' 
+Detecting annotation processors on the compile classpath is deprecated and Gradle 5.0 will ignore them.
+Please add them to the annotation processor path instead. 
+If you did not intend to use annotation processors, 
+you can use the '-proc:none' compiler argument to ignore them.
+```
+
+在 stackoverflow上相关帖子 里面提及的方式也是错误的:
+
+```
+compileOnly('org.projectlombok:lombok:1.16.20') 
+annotationProcessor 'org.projectlombok:lombok:1.16.20'
+```
+
+官方推荐的方式
+```
+annotationProcessor 'org.projectlombok:lombok:1.18.2'
+compileOnly 'org.projectlombok:lombok:1.18.2'
+testAnnotationProcessor 'org.projectlombok:lombok:1.18.2'
+testCompileOnly 'org.projectlombok:lombok:1.18.2'
+```
+
+或者使用gradle lombok插件
+
+```
+repositories {
+    mavenCentral()
+}
+
+plugins {
+    id 'net.ltgt.apt' version '0.10'
+}
+
+dependencies {
+    compileOnly 'org.projectlombok:lombok:1.18.2'
+
+    apt "org.projectlombok:lombok:1.18.2"
+}
+```
+
+**参考链接**： https://www.orchome.com/1615
+
 
 ## 资源推荐
 
