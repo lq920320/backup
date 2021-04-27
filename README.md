@@ -180,6 +180,82 @@ dependencies {
 **参考链接**： https://www.orchome.com/1615
 
 
+## 工具/中间件类的问题
+
+### Elasticsearch
+
+#### 1、Elasticsearch 移除 type 之后的新姿势
+
+随着 7.0 版本的即将发布，type 的移除也是越来越近了，在 6.0 的时候，已经默认只能支持一个索引一个 type 了，7.0 版本新增了一个参数 `include_type_name` ，即让所有的 API 是 type 相关的，这个参数在 7.0 默认是 true，不过在 8.0 的时候，会默认改成 false，也就是不包含 type 信息了，这个是 type 用于移除的一个开关。
+
+让我们看看最新的使用姿势吧，当 `include_type_name` 参数设置成 false 后：
+```
+索引操作：PUT {index}/{type}/{id}需要修改成PUT {index}/_doc/{id}
+Mapping 操作：PUT {index}/{type}/_mapping 则变成 PUT {index}/_mapping
+所有增删改查搜索操作返回结果里面的关键字 _type 都将被移除
+父子关系使用 join 字段来构建
+```
+
+```
+#创建索引
+PUT twitter
+{
+  "mappings": {
+    "_doc": {
+      "properties": {
+        "type": { "type": "keyword" }, 
+        "name": { "type": "text" },
+        "user_name": { "type": "keyword" },
+        "email": { "type": "keyword" },
+        "content": { "type": "text" },
+        "tweeted_at": { "type": "date" }
+      }
+    }
+  }
+}
+
+#修改索引
+PUT twitter/_doc/user-kimchy
+{
+  "type": "user", 
+  "name": "Shay Banon",
+  "user_name": "kimchy",
+  "email": "shay@kimchy.com"
+}
+
+#搜索
+GET twitter/_search
+{
+  "query": {
+    "bool": {
+      "must": {
+        "match": {
+          "user_name": "kimchy"
+        }
+      },
+      "filter": {
+        "match": {
+          "type": "tweet" 
+        }
+      }
+    }
+  }
+}
+
+#重建索引
+POST _reindex
+{
+  "source": {
+    "index": "twitter"
+  },
+  "dest": {
+    "index": "new_twitter"
+  }
+}
+```
+链接：https://elasticsearch.cn/article/601
+
+
 ## 资源推荐
 
 1. [生成好看的代码截图网站——Carbon](https://carbon.now.sh/)
