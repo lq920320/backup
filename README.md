@@ -53,6 +53,14 @@ DELETE FROM task_news a where exists(select 1 from temp_new b where a.ID=b.ID an
 
 **方法2**：文件 -> 首选项 -> 设置，搜索“preview”，把“Workbench > Ediotor: Enable PreView”的勾选去掉。注意“用户”和“工作区”确保都去掉了勾选。
 
+#### 2. VS Code 国内下载速度慢的解决方案
+
+替换源文件域名地址为：`https://vscode.cdn.azure.cn/`
+
+比如，原地址为：`https://az764295.vo.msecnd.net/stable/054a9295330880ed74ceaedda236253b4f39a335/VSCode-darwin-universal.zip`，
+替换为：`https://vscode.cdn.azure.cn/stable/054a9295330880ed74ceaedda236253b4f39a335/VSCode-darwin-universal.zip`
+
+
 ## Intej IDEA IDE
 
 #### 1. 多个文件多行展示
