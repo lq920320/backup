@@ -138,7 +138,7 @@ windows下 报错误 禁止运行脚本 ， 禁止脚本执行
 
 ```
 # 启动MySQL服务
-sudo ./usr/local/MySQL/support-files/mysql.server start
+sudo ./usr/local/mysql/support-files/mysql.server start
 
 # 停止MySQL服务
 sudo ./usr/local/mysql/support-files/mysql.server stop
