@@ -132,6 +132,22 @@ windows下 报错误 禁止运行脚本 ， 禁止脚本执行
 
 不得不说，**重启大法好！！！**
 
+#### 2、重启 MySQL 服务
+
+系统更新之后，好像会把 mysql 服务给关掉，mysql 默认安装地址是 `个人\磁盘\usr\local\mysql\support-files`，命令如下：
+
+```
+# 启动MySQL服务
+sudo ./usr/local/MySQL/support-files/mysql.server start
+
+# 停止MySQL服务
+sudo ./usr/local/mysql/support-files/mysql.server stop
+
+# 重启MySQL服务
+sudo ./usr/local/mysql/support-files/mysql.server restart
+```
+
+
 ## Gradle
 
 #### 1、lombok 引用失败，导致一致编译不通过，找不到符号 `.getXxx()`
