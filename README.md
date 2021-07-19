@@ -329,6 +329,7 @@ POST _reindex
 - https://www.toyaml.com/index.html : yaml 格式与 properties 格式的相互转换工具
 - https://regex101.com/ : 正则表达式测试工具，可以看到执行步数
 - https://readme.so/ : The easiest way to create a README，方便又实用
+- https://chrome.zzzmh.cn/ : Chrome插件下载中心，无需科学上网
 
 #### 项目推荐
 
