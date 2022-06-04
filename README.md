@@ -230,6 +230,37 @@ docker stop <CONTAINER_ID>
 ```
 docker exec -it <CONTAINER_ID> /bin/bash
 ```
+列出镜像：
+```
+docker image list
+```
+列出容器：
+```
+# 列出运行中的容器
+docker ps
+
+# 列出所有容器
+docker ps -a
+```
+清理无用的容器：
+```
+# 清理无用的容器，如果要跳过验证，加上 -f 或者 --force
+docker container prune 
+
+# 清理超过24小时的已停止容器
+docker container prune --filter"until = 24h"
+```
+清理无用的镜像：
+```
+# 清理无用的镜像，仅清除dangling 镜像。dangling images是未标记的镜像，并且未被任何容器引用。
+docker image prune
+
+# 清除现有容器未使用的所有镜像
+docker image prune -a 
+
+# 清理超过24小时前创建的镜像
+docker image prune -a --filter"until = 24h"
+```
 
 ## 工具/中间件类的问题
 
