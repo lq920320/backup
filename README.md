@@ -203,6 +203,33 @@ dependencies {
 
 **参考链接**： https://www.orchome.com/1615
 
+## Docker 命令
+
+### 1、基础命令
+
+构建一个镜像：
+```
+docker build -t <Tag>:<Version> . 
+```
+运行一个镜像：
+```
+docker run -p <CONTAINER_PORT>:<SERVER_PORT> --name <CONTAINER_NAME> <Tag>:<Version>
+
+# 设置时区运行
+docker run -e TZ=Asia/Shanghai -p <CONTAINER_PORT>:<SERVER_PORT> --name <CONTAINER_NAME> <Tag>:<Version>
+```
+启动一个容器：
+```
+docker start <CONTAINER_ID>
+```
+停止一个容器：
+```
+docker stop <CONTAINER_ID>
+```
+进入到运行中的容器里：
+```
+docker exec -it <CONTAINER_ID> /bin/bash
+```
 
 ## 工具/中间件类的问题
 
