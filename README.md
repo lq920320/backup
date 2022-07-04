@@ -101,6 +101,12 @@ Progress (1): 41 kB
 
 [stackoverflow地址](https://stackoverflow.com/questions/21638697/disable-maven-download-progress-indication)
 
+清理并重新安装依赖：
+```
+mvn clean install -U
+```
+
+
 ## vue 项目中展示 markdown 文件内容
 
 使用插件 [`vue-markdown-loader`](https://github.com/QingWei-Li/vue-markdown-loader)。
@@ -262,6 +268,18 @@ docker image prune -a
 docker image prune -a --filter"until = 24h"
 ```
 
+### 2、查看容器日志
+
+先查看容器名称
+```
+docker ps
+```
+
+查看容器日志
+```
+docker logs -f -t --tail 100 <CONTAINER_NAME>
+```
+
 ## 工具/中间件类的问题
 
 ### Elasticsearch
@@ -397,11 +415,6 @@ POST _reindex
 - 黑客法则定律大全：https://github.com/nusr/hacker-laws-zh
 - 开发人员学习资料：https://github.com/developer-learning
 - 现代 JS 教程地址：https://github.com/javascript-tutorial/en.javascript.info/tree/master
-
-
-
-
-
 
 
 
