@@ -101,6 +101,10 @@ Progress (1): 41 kB
 
 [stackoverflow地址](https://stackoverflow.com/questions/21638697/disable-maven-download-progress-indication)
 
+#### 解决问题
+
+`resolution will not be reattempted until the update interval of XXX has elapsed or updates are force`
+
 清理并重新安装依赖：
 ```
 mvn clean install -U
