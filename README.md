@@ -110,6 +110,40 @@ Progress (1): 41 kB
 mvn clean install -U
 ```
 
+#### 解决依赖的问题
+
+当构建一个 spring webflux demo 时，默认会依赖 `spring-boot-starter-reactor-netty`，这时候启动项目的时候会报错：
+
+```
+Suppressed: java.lang.UnsatisfiedLinkError: no netty_resolver_dns_native_macos_aarch_64 in java.library.path: [/Users/qianliu/Library/Java/Extensions, /Library/Java/Extensions, /Network/Library/Java/Extensions, /System/Library/Java/Extensions, /usr/lib/java, .]
+			at java.base/java.lang.ClassLoader.loadLibrary(ClassLoader.java:2670)
+			at java.base/java.lang.Runtime.loadLibrary0(Runtime.java:830)
+			at java.base/java.lang.System.loadLibrary(System.java:1873)
+			at io.netty.util.internal.NativeLibraryUtil.loadLibrary(NativeLibraryUtil.java:38)
+			at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+			at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+			at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+			at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+			at io.netty.util.internal.NativeLibraryLoader$1.run(NativeLibraryLoader.java:425)
+			at java.base/java.security.AccessController.doPrivileged(Native Method)
+			at io.netty.util.internal.NativeLibraryLoader.loadLibraryByHelper(NativeLibraryLoader.java:417)
+			at io.netty.util.internal.NativeLibraryLoader.loadLibrary(NativeLibraryLoader.java:383)
+			... 77 common frames omitted
+```
+
+原因是需要额外的插件来解决 dns 的问题，所以要引入依赖(以我的电脑M1为例，`classifier` 为 `osx-aarch_64`，gradle 同理)：
+
+```
+		<dependency>
+			<groupId>io.netty</groupId>
+			<artifactId>netty-resolver-dns-native-macos</artifactId>
+			<version>4.1.79.Final</version>
+			<classifier>osx-aarch_64</classifier>
+		</dependency>
+```
+
+可以参考 [issue](https://github.com/netty/netty/issues/11020)
+
 
 ## vue 项目中展示 markdown 文件内容
 
