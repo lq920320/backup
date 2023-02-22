@@ -393,6 +393,22 @@ POST _reindex
 ```
 链接：https://elasticsearch.cn/article/601
 
+#### 2、Elasticsearch 设置密码
+1. 修改elasticsearch.yml
+```yml
+http.cors.enabled: true
+http.cors.allow-origin: "*"
+http.cors.allow-headers: Authorization
+xpack.security.enabled: true
+xpack.security.transport.ssl.enabled: true
+```
+
+2. 在bin目录执行命令
+```
+./elasticsearch-setup-passwords interactive
+```
+然后就可以设置密码了
+
 
 ## 资源推荐
 
