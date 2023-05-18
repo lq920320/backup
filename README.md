@@ -413,12 +413,12 @@ xpack.security.transport.ssl.enabled: true
 
 ### JVM查看内存占用以及类数量
 
-查JVM内存回收 ：堆内存使用情况和GC情况
- jstat -gcutil <pid> 2000 100
-查内存
-jmap -histo <pid> | grep "com.jst" | head -n 20
- -histo[:live] 打印每个class的实例数目,内存占用,类全名信息. VM的内部类名字开头会加上前缀”*”. 如果live子参数加上后,只统计活的对象数量. 
-jmap -histo:live <pid> | grep "com.jst"  | head -n 20
+1. 查JVM内存回收 ：堆内存使用情况和GC情况  
+ `jstat -gcutil <pid> 2000 100`   
+2. 查内存  
+`jmap -histo <pid> | grep "com.jst" | head -n 20`  
+3. `-histo[:live]` 打印每个class的实例数目,内存占用,类全名信息. VM的内部类名字开头会加上前缀`”*”`. 如果live子参数加上后,只统计活的对象数量.    
+ `jmap -histo:live <pid> | grep "com.jst"  | head -n 20`
 
 链接，Java的jstat命令使用详解：https://cloud.tencent.com/developer/beta/article/1985765
 
