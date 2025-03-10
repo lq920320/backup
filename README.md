@@ -452,7 +452,7 @@ System.out.println(pid);
 - Free Mybatis plugin ：帮助你在 Mapper.java 与 mapper.xml 中方便跳转
 - Lombok : 减少代码量
 - .ignore : 帮你生成 ignore 文件
-- codota : 人工智能帮你写代码【Install on IntelliJ and Android Studio to get advanced Java code completions】
+- codota : 人工智能帮你写代码【Install on IntelliJ and Android Studio to get advanced Java code completions】，现在改名字了（https://www.tabnine.com/blog/codota-is-now-tabnine/），叫 tabnine，[免费30天，后续收费](https://www.tabnine.com/pricing/)
 - Alibaba Java Coding Guidelines : 代码规范扫描插件
 - SequenceDiagram : 展示调用时序图，参考链接，https://juejin.im/post/6887719053931053064
 - CamelCase : 转换你的驼峰以及蛇型命名
